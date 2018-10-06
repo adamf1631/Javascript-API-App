@@ -1,0 +1,69 @@
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title>The News Room</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="shortcut icon" type="image/x-icon" href="favicon-2.ico">
+      <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+jQuery(function() {
+  jQuery('#showall').click(function() {
+    jQuery('.targetDiv').show();
+  });
+  jQuery('.showSingle').click(function() {
+    jQuery('.targetDiv').hide();
+    jQuery('#div' + $(this).attr('target')).show();
+  });
+});
+  </script>
+    </head>
+    <body class="grey lighten-2">
+      <nav class="black">
+          <div class="nav-wrapper">
+            <div class="container">
+              <a href="#!" class="brand-logo">The News Room</a>
+            </div>
+          </div>
+      </nav>
+
+      <div class="container">
+        <div class="formDiv">
+          <a id="showall">All</a>
+          <a class="showSingle" target="2">The Wall Street Journal</a>
+          <a class="showSingle" target="1">The New York Times</a>
+          <a class="showSingle" target="3">The BBC News</a>
+          <a class="showSingle" target="4">The Huffinton Post</a>
+          <a class="showSingle" target="5">Fox News</a>
+          <a class="showSingle" target="6">CNN</a>
+        </div>
+      </div>
+
+    <div class="container">
+      <div id="div1" class="targetDiv"><div id="newyorktimes"></div></div>
+      <div id="div2" class="targetDiv"><div id="wallstreet"></div></div>
+      <div id="div3" class="targetDiv"><div id="bbcnews"></div></div>
+      <div id="div4" class="targetDiv"><div id="huffpost"></div></div>
+      <div id="div5" class="targetDiv"><div id="foxnews"></div></div>
+      <div id="div6" class="targetDiv"><div id="cnn"></div></div>
+    </div>
+
+
+
+
+<footer>
+  Thank you for using the News Room Services | <a href="https://newsapi.org/" target="_blank">source</a>
+</footer>
+
+<script src="app.js"></script>
+
+      <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    </body>
+  </html>
